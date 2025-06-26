@@ -1,6 +1,6 @@
 # Fashion MNIST 분류 모델 분석
 
-TensorFlow와 Keras를 이용하여 Fashion MNIST 데이터셋을 학습하고 평가하는 예제 코드입니다.
+TensorFlow와 Keras를 이용하여 Fashion MNIST 데이터셋을 학습하고 평가하는 코드
 
 ---
 
