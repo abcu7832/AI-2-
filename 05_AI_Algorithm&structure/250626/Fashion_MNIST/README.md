@@ -4,7 +4,7 @@ TensorFlow와 Keras를 이용하여 Fashion MNIST 데이터셋을 학습하고 �
 
 ---
 
-# 코드
+# 코드 설명
 
 ```bash
 import tensorflow as tf
