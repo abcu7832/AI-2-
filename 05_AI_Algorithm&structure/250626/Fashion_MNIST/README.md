@@ -130,7 +130,7 @@ print('accuracy score : ', accuracy_score(tf.math.argmax(predictions, -1), test_
 ---
 
 ## 결과
-![train_images](./images/train_images.png)
-![train_labels](./images/train_labels.png)
-![test_images](./images/test_images.png)
-![test_labels](./images/test_labels.png)
+![train_images](images/train_images.png)
+![train_labels](images/train_labels.png)
+![test_images](images/test_images.png)
+![test_labels](images/test_labels.png)
