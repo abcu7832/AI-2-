@@ -146,3 +146,4 @@ print('accuracy score : ', accuracy_score(tf.math.argmax(predictions, -1), test_
 ---
 
 ## 결과
+accuracy = 0.8853
