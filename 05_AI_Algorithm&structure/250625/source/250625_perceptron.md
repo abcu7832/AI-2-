@@ -324,7 +324,7 @@ plt.grid(True)
 plt.show()
 
 ```
-# 다중 퍼셉트론
+## 다중 퍼셉트론으로 XOR gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
