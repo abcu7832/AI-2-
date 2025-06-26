@@ -166,6 +166,10 @@ plt.title('Perceptron Learning Error Over Epochs (OR Gate)')
 plt.grid(True)
 plt.show()
 ```
+![or_result](/images/250625_or_r.png)
+![or_boundary](/images/250625_or_b.png)
+![or_error](/images/250625_or_e.png)
+
 ## 단층 퍼셉트론으로 NAND gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
@@ -247,6 +251,9 @@ plt.title('Perceptron Learning Error Over Epochs (NAND Gate)')
 plt.grid(True)
 plt.show()
 ```
+![NAND_result](/images/250625_nand_r.png)
+![NAND_boundary](/images/250625_nand_b.png)
+![NAND_error](/images/250625_nand_e.png)
 ## 단층 퍼셉트론으로 XOR gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
@@ -329,6 +336,9 @@ plt.grid(True)
 plt.show()
 
 ```
+![xor_result](/images/250625_xor_r.png)
+![xor_boundary](/images/250625_xor_b.png)
+![xor_error](/images/250625_xor_e.png)
 ## 다중 퍼셉트론으로 XOR gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
@@ -437,3 +447,6 @@ plt.ylabel("Loss")
 plt.grid(True)
 plt.show()
 ```
+![xor_result](/images/250625_xor_mr.png)
+![xor_boundary](/images/250625_xor_mb.png)
+![xor_error](/images/250625_xor_me.png)
