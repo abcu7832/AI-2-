@@ -126,3 +126,11 @@ plt.show()
 
 # 10. 최종 정확도 출력
 print('accuracy score : ', accuracy_score(tf.math.argmax(predictions, -1), test_labels))
+
+---
+
+## 결과
+![train_images](/home/syc/사진/스크린샷 2025-06-26 17-17-48.png)
+![train_labels](/home/syc/사진/스크린샷 2025-06-26 17-18-12.png)
+![test_images](/home/syc/사진/스크린샷 2025-06-26 17-18-34.png)
+![test_labels](/home/syc/사진/스크린샷 2025-06-26 17-19-42.png)
