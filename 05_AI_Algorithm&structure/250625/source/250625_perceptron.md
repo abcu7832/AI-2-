@@ -1,5 +1,6 @@
-
-## AND gate
+# 퍼셉트론 python 코드
+---
+## 단층 퍼셉트론으로 AND gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -80,7 +81,7 @@ plt.title('Perceptron Learning Error Over Epochs (AND Gate)')
 plt.grid(True)
 plt.show()
 ```
-## OR gate
+## 단층 퍼셉트론으로 OR gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -161,7 +162,7 @@ plt.title('Perceptron Learning Error Over Epochs (OR Gate)')
 plt.grid(True)
 plt.show()
 ```
-## NAND gate
+## 단층 퍼셉트론으로 NAND gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -242,7 +243,7 @@ plt.title('Perceptron Learning Error Over Epochs (NAND Gate)')
 plt.grid(True)
 plt.show()
 ```
-## XOR gate
+## 단층 퍼셉트론으로 XOR gate를 시뮬레이션하기 위한 코드
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
