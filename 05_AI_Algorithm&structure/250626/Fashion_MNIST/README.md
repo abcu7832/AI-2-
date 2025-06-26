@@ -28,6 +28,11 @@ print(test_labels.shape)
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 ```
+![train_images](/images/250626_train_images.png)
+![train_labels](/images/250626_train_labels.png)
+![test_images](/images/250626_test_images.png)
+![test_labels](/images/250626_test_labels.png)
+
 ## 2. 데이터 시각화
 ```python
 matplotlib.use('Qt5Agg')
@@ -137,11 +142,7 @@ plt.show()
 ```python
 print('accuracy score : ', accuracy_score(tf.math.argmax(predictions, -1), test_labels))
 ```
+![accuracy](/images/250626_accuracy.png)
 ---
 
 ## 결과
-![train_images](/images/250626_train_images.png)
-![train_labels](/images/250626_train_labels.png)
-![test_images](/images/250626_test_images.png)
-![test_labels](/images/250626_test_labels.png)
-![accuracy](/images/250626_accuracy.png)
