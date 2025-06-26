@@ -130,7 +130,7 @@ print('accuracy score : ', accuracy_score(tf.math.argmax(predictions, -1), test_
 ---
 
 ## 결과
-![train_images](./images/스크린샷_2025-06-26_17-17-48.png)
-![train_labels](./images/스크린샷_2025-06-26_17-18-12.png)
-![test_images](./images/스크린샷_2025-06-26_17-18-34.png)
-![test_labels](./images/스크린샷_2025-06-26_17-19-42.png)
+![train_images](./images/train_images.png)
+![train_labels](./images/train_labels.png)
+![test_images](./images/test_images.png)
+![test_labels](./images/test_labels.png)
