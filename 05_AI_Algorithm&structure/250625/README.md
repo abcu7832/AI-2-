@@ -1,4 +1,4 @@
-# 퍼셉트론 python 코드
+# 퍼셉트론 python 실습
 
 ## 단층 퍼셉트론으로 AND gate를 시뮬레이션하기 위한 코드
 ```python
