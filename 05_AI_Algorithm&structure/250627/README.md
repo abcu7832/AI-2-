@@ -88,4 +88,6 @@ plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper right')
 plt.show()
 ```
-![images_이름](/images/.png)
+![images_mnist_모델](/images/250627_d05_model_img.png)
+![images_mnist_학습곡선](/images/250627_d05_mnist학습곡선.png)
+![images_mnist_loss](/images/250627_d05_model_loss.png)
