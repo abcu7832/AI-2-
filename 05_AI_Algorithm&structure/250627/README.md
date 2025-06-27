@@ -1,6 +1,7 @@
 # D05 선형모델
 
 ## MNIST 실습
+* epoch size = 300
 ```python
 # 기본 라이브러리 불러오기
 import numpy as np
