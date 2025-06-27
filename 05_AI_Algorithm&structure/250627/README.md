@@ -1,7 +1,7 @@
 # D05 선형모델
 
 ## MNIST 실습
-* epoch size = 300
+* epoch size = 30
 ```python
 # 기본 라이브러리 불러오기
 import numpy as np
@@ -59,7 +59,7 @@ md.summary() # 모델 요약
 md.compile(loss='sparse_categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 
 # 모델 학습: 학습 횟수, batch_size, 검증용 데이터 설정
-hist = md.fit(train_x2, train_y, epochs = 300, batch_size = 64, validation_split = 0.2)
+hist = md.fit(train_x2, train_y, epochs = 30, batch_size = 64, validation_split = 0.2)
 
 # Mnist 실습
 # 학습결과 분석: 학습 곡선 그리기
@@ -90,5 +90,5 @@ plt.legend(['Train', 'Test'], loc='upper right')
 plt.show()
 ```
 ![images_mnist_모델](/images/250627_d05_model_img.png)
-![images_mnist_학습곡선](/images/250627_d05_mnist학습곡선.png)
-![images_mnist_loss](/images/250627_d05_model_loss.png)
+![images_mnist_학습곡선](/images/250627_d05_학습곡선_e30.png)
+![images_mnist_loss](/images/250627_d05_loss_e30.png)
