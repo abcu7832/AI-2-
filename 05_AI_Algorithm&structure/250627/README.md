@@ -88,3 +88,4 @@ plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper right')
 plt.show()
 ```
+![images_이름](/images/.png)
