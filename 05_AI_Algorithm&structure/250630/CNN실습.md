@@ -1,5 +1,10 @@
-# CNN 실습
-## 
+# 250630
+## CNN 실습
+* 합성곱 CNN
+* ReLU 활성화
+* MaxPooling
+* 시각화 및 결과 반환
+* CNN의 한 layer 동작을 numpy만으로 구현한 예제
 ```python
 import numpy as np
 from PIL import Image
