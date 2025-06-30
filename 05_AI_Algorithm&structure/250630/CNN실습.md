@@ -91,3 +91,4 @@ filters = [np.ones((3,3))] *3
 
 m0 = ConvDraw(nimg31, filters, size=(12, 10), k=0)
 ```
+![CNN_실습](/images/250630_CNN실습_capture.png)
