@@ -2,6 +2,7 @@
 ## 사물 = 하리보
 * 직접 촬영한 이미지를 이용해 CNN 모델로 학습한 후, OpenCV를 이용해 카메라로 실시간 인식하여 하리보 색깔(클래스) 구분
 ```python
+# OpenCV source code
 import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
