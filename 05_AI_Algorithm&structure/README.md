@@ -8,5 +8,5 @@
 * 250625: perceptron, 단층 퍼셉트론 실습
 * 250626: Deep Learning
 * 250627: 선형모델, 신경망모델
-* 250630: CNN 모델
-* 250701: On Device AI
+* 250630: CNN 모델, MINI project
+* 250701: On Device AI, MINI project
