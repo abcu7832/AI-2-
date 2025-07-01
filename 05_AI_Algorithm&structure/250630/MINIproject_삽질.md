@@ -17,7 +17,7 @@ class_names = ['green', 'middle', 'orange', 'red', 'white', 'yellow']
 img_size = (64, 64)  # 학습에 사용한 이미지 크기와 동일해야 함
 
  #웹캠 열기
-cap = cv2.VideoCapture(0)  # 0번 카메라는 기본 웹캠
+cap = cv2.VideoCapture(2)  # 2번 카메라는 외부 웹캠
 
 while True:
     ret, frame = cap.read()
