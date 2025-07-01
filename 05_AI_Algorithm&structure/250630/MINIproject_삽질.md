@@ -57,6 +57,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 ```python
+# CNN 모델
 import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras import layers, models
