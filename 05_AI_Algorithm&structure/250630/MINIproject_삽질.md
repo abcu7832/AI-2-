@@ -56,5 +56,88 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+```python
+import matplotlib.pyplot as plt
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras import layers, models
+from tensorflow.keras.optimizers import Adam
+import os
+
+# 경로 설정
+train_dir = './haribo_dataset/train'
+val_dir = './haribo_dataset/val'
+
+# 이미지 제너레이터 설정 (데이터 증강 포함)
+img_size = (64, 64)
+batch_size = 16
+num_classes = 6  # 클래스 수
+
+train_datagen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=20,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    brightness_range=[0.5, 1.5],
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True,
+    fill_mode='nearest'
+)
+
+val_datagen = ImageDataGenerator(rescale=1./255)  # 검증 데이터는 증강하지 않고 정규화만
+
+train_generator = train_datagen.flow_from_directory(
+    train_dir,
+    target_size=img_size,
+    batch_size=batch_size,
+    class_mode='categorical'
+)
+
+val_generator = val_datagen.flow_from_directory(
+    val_dir,
+    target_size=img_size,
+    batch_size=batch_size,
+    class_mode='categorical'
+)
+
+# CNN 모델 설계 및 학습 - 제너레이터가 성공적으로 생성되었을 경우에만 진행
+if train_generator.samples > 0 and val_generator.samples > 0:
+    model = models.Sequential([
+        layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
+        layers.MaxPooling2D((2, 2)),
+        layers.Conv2D(64, (3, 3), activation='relu'),
+        layers.MaxPooling2D((2, 2)),
+        layers.Flatten(),
+        layers.Dense(64, activation='relu'),
+        layers.Dense(num_classes, activation='softmax')
+    ])
+
+    model.compile(optimizer=Adam(learning_rate=0.001),
+                  loss='categorical_crossentropy',
+                  metrics=['accuracy'])
+
+    # 학습
+    history = model.fit(
+        train_generator,
+        validation_data=val_generator,
+        epochs=20
+    )
+
+    # 정확도 시각화
+    plt.plot(history.history['accuracy'], label='Train Accuracy')
+    plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+    plt.legend()
+    plt.title('Accuracy')
+    plt.show()
+
+    # 손실 시각화
+    plt.plot(history.history['loss'], label='Train Loss')
+    plt.plot(history.history['val_loss'], label='Validation Loss')
+    plt.legend()
+    plt.title('Loss')
+    plt.show()
+else:
+    print("ImageDataGenerator가 이미지를 로드하지 못했습니다. 파일 경로 및 내용 확인이 필요합니다.")
+```
 * 아직 100% 성공 아님;;;
 * 현재 Red, Green, White 세가지만 분류가능하고, 그 외 나머지 색은 아직 불가능.
