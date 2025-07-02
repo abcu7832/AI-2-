@@ -1,0 +1,4 @@
+## 수업내용
+* linxu command 익히기
+* verdi tool 사용하여 simulation 
+* Systemverilog 간단히 익히기
