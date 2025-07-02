@@ -10,3 +10,4 @@
 * 250627: 선형모델, 신경망모델
 * 250630: CNN 모델, MINI project
 * 250701: MINI project 보완 및 발표, 온디바이스 AI project 주제선정
+* 250702: 온디바이스 AI project 주제 추리기 및 구체화
