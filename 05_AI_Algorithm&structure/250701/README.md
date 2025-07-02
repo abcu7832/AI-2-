@@ -8,4 +8,4 @@
 * 촬영 환경
 
 ## 과제
-: (온디바이스AI in raspberry pi 5)프로젝트 주제 선정
+* 프로젝트 주제 선정 (온디바이스AI in raspberry pi 5)
