@@ -3,20 +3,21 @@
 * OpenCV 실습
 ----------------------------
 ## OpenCV란?
-
+![OpenCV](/images/250702_1.png)
 * opencv: open-source computer vision
 * 컴퓨터 비전 관련 작업을 위한 라이브러리 집합
 ----------------------------
 ## 개발 환경 설정 -Ubuntu
-
-
+![환경 설정](/images/250702_2.png)
 ----------------------------
 ## 색 체계
-
+![RGB](/images/250702_3.png)
+![HSL](/images/250702_4.png)
 * HSL 색 검출에 용이함. H에 대해서만 if문을 사용하면 되기 때문
 ----------------------------
 # Basic Operation
 ## 이미지
+![3pHSL](/images/250702_5.png)
 * RGB/HSV Color space
 ```python
 import numpy as np
@@ -47,8 +48,9 @@ cv2.waitKey(0)
 cv2.imwrite("output.png", img)
 cv2.destroyAllwindows()
 ```
-
+![3p최형우](/images/250702_6.png)
 * Crop / Resize
+![4p](/images/250702_7.png)
 ```python
 import cv2
 
@@ -64,7 +66,7 @@ cv2.imshow("Resized image", resized)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-
+![4p](/images/250702_8.png)
 * Reverse Image(역상)
 ```python
 import cv2
@@ -77,9 +79,9 @@ cv2.imshow("dst", dst)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-
-* bit operation
+![5p](/images/250702_9.png)
 ```python
+# bit operation
 import cv2
 src = cv2.imread("201796967_1280.jpg",cv2.IMREAD_COLOR)
 dst1 = cv2.bitwise_not(src)
@@ -94,7 +96,7 @@ cv2.imshow("XOR", dst4)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-
+![5p](/images/250702_10.png)
 * binary(이진화)
 ```python
 import cv2
