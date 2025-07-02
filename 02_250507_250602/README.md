@@ -5,7 +5,7 @@
 * VS code
 * FPGA: Basys3(DIGILENT)
 ## 250507~250602
-* 250507: 실습환경조성
+* 250507: 실습환경세팅
 * 250508: 4-bit adder 설계
 * 250509: 10000 카운터 & FND 컨트롤러 설계
 * 250510: fnd_com을 컨트롤하기 위한 calculator module 설계
