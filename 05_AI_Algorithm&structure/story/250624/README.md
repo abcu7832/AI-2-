@@ -49,6 +49,7 @@ cv2.imwrite("output.png", img)
 cv2.destroyAllwindows()
 ```
 ![3p최형우](/images/250702_6.png)
+
 * Crop / Resize
 ![4p](/images/250702_7.png)
 ```python
