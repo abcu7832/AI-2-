@@ -206,6 +206,7 @@ cv2.destroyAllWindows()
 
 
 * 채널 분리 및 병합
+-----------------------
 ![5p](/images/250624_32.png)
 ```python
 import numpy as np
@@ -245,6 +246,7 @@ cv2.destroyAllWindows()
 
 # 카메라&동영상
 * 카메라로부터 input을 받아 보여주고 동영상 파일로 저장하기
+---------------------------
 ![5p](/images/250624_38.png)
 ```python
 import cv2
@@ -292,6 +294,7 @@ cv2.destroyAllWindows()
 * ‘c’를 입력한 후 capture 된 사진. 파일명도 capture_0.jpg 로 의도한 대로 동작한 것을 확인.
 -----------------------
 * GUI Input 활용하기(TEXT/LINE/RECTANGLE)
+--------
 ![5p](/images/250624_42.png)
 ```python
 import cv2
@@ -337,6 +340,7 @@ cv2.destroyAllWindows()
 
 -----------------------------------------------------
 * GUI Input 활용하기(TRACKBAR)
+-------------------------
 ![5p](/images/250624_48.png)
 ```python
 import cv2
