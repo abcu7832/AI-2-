@@ -95,10 +95,7 @@ cv2.imshow("dst", dst)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-![r](/images/250624_16_18_19.png)
 ![s](/images/250624_17.png)
-![d](/images/250624_16_18_19.png)
-![e](/images/250624_16_18_19.png)
 
 * Binary
 -------------
@@ -119,9 +116,15 @@ cv2.imshow("XOR", dst4)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-![5p](/images/250624_10.png)
-* binary(이진화)
-![5p](/images/250624_11.png)
+* src
+![r](/images/250624_16_18_19.png)
+* AND
+![r](/images/250624_16_18_19.png)
+* OR
+![r](/images/250624_16_18_19.png)
+
+* Edge Detection
+![5p](/images/250624_21.png)
 ```python
 import cv2
 
@@ -134,8 +137,13 @@ cv2.imshow("dst", dst)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![5p](/images/250624_11.png)
+* cv2.threshold(gray,100,255,cv2.THRESH_BINARY)
+![5p](/images/250624_22.png)
+* cv2.threshold(gray,100,200,cv2.THRESH_BINARY)
+![5p](/images/250624_23.png)
+
 * edge detection
+![5p](/images/250624_24.png)
 ```python
 import cv2
 
@@ -155,7 +163,16 @@ cv2.imshow("Canny", edges)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
+* Sobel edge detect
+![5p](/images/250624_25.png)
+* Laplacian 변환 Edge detect
+![5p](/images/250624_26.png)
+* Canny Edge Detection
+![5p](/images/250624_27.png)
+=> 가장 뚜렷한 edge 검출
+
 * add Weighted
+![5p](/images/250624_28.png)
 ```python
 import cv2
 
@@ -174,8 +191,16 @@ cv2.imshow("red", red)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
+* 위의 코드 실행 결과
+![5p](/images/250624_29.png)
+* lower_red: cv2.inRange(hsv, (0,50,50), (5,155,155))
+![5p](/images/250624_30.png)
+* upper_red: cv2.inRange(hsv, (170,200,200), (180,255,255))
+![5p](/images/250624_31.png)
+
 
 * 채널 분리 및 병합
+![5p](/images/250624_32.png)
 ```python
 import numpy as np
 import cv2
@@ -201,9 +226,20 @@ cv2.imshow("bgz", bgz)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
+* inverse
+![5p](/images/250624_33.png)
+* r
+![5p](/images/250624_34.png)
+* g
+![5p](/images/250624_35.png)
+* b
+![5p](/images/250624_36.png)
+* bgz
+![5p](/images/250624_37.png)
 
 # 카메라&동영상
 * 카메라로부터 input을 받아 보여주고 동영상 파일로 저장하기
+![5p](/images/250624_38.png)
 ```python
 import cv2
 
@@ -244,8 +280,13 @@ out.release()
 # 모든 윈도우 닫기
 cv2.destroyAllWindows()
 ```
-
+* 문제점: 동영상이 빠르게 재생된 후, 종료. 해결방안: cv2.waitKey(55)로 변경
+![5p](/images/250624_39.png)
+----------------------------
+* ‘c’를 입력한 후 capture 된 사진. 파일명도 capture_0.jpg 로 의도한 대로 동작한 것을 확인.
+-----------------------
 * GUI Input 활용하기(TEXT/LINE/RECTANGLE)
+![5p](/images/250624_42.png)
 ```python
 import cv2
 
@@ -282,62 +323,15 @@ while(cap.isOpened()):
 cap.release()
 cv2.destroyAllWindows()
 ```
+![5p](/images/250624_43.png)
+![5p](/images/250624_44.png)
+![5p](/images/250624_45.png)
+![5p](/images/250624_46.png)
+![5p](/images/250624_47.png)
 
-```python
-import cv2
-
-# 마우스 클릭 위치를 저장할 리스트
-circle_centers = []
-
-# 마우스 클릭 이벤트 처리 함수
-def mouse_callback(event, x, y, flags, param):
-    global circle_centers
-    if event == cv2.EVENT_LBUTTONDOWN:  # 왼쪽 버튼 클릭 시
-        circle_centers.append((x, y))  # 클릭한 위치를 리스트에 추가
-
-# 비디오 캡처 설정
-cap = cv2.VideoCapture(0)
-
-# 좌표 설정
-topLeft = (50, 50)
-bottomRight = (300, 300)
-
-# 마우스 콜백 함수 등록
-cv2.namedWindow("Camera")
-cv2.setMouseCallback("Camera", mouse_callback)
-
-while(cap.isOpened()):
-    ret, frame = cap.read()
-
-    # 선 그리기
-    cv2.line(frame, topLeft, bottomRight, (0, 255, 0), 5)
-
-    # 직사각형 대신 동그라미 그리기
-    center = ((topLeft[0] + bottomRight[0]) // 2, (topLeft[1] + bottomRight[1]) // 2)
-    radius = min(bottomRight[0] - topLeft[0], bottomRight[1] - topLeft[1]) // 2
-    cv2.circle(frame, center, radius, (0, 0, 255), 5)
-
-    # 텍스트 추가
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(frame, 'BLUR', [pt + 80 for pt in topLeft], font, 3, (255, 0, 255), 15)
-
-    # 마우스 클릭으로 추가된 동그라미 그리기
-    for (cx, cy) in circle_centers:
-        cv2.circle(frame, (cx, cy), 30, (0, 255, 0), 5)  # 클릭한 위치에 동그라미
-
-    # 비디오 창에 출력
-    cv2.imshow("Camera", frame)
-
-    # 종료 조건
-    key = cv2.waitKey(30) & 0xFF
-    if key == ord("q"):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-```
-
+-----------------------------------------------------
 * GUI Input 활용하기(TRACKBAR)
+![5p](/images/250624_48.png)
 ```python
 import cv2
 
@@ -427,3 +421,8 @@ while(cap.isOpened()):
 cap.release()
 cv2.destroyAllWindows()
 ```
+![5p](/images/250624_49.png)
+![5p](/images/250624_50.png)
+![5p](/images/250624_51.png)
+![5p](/images/250624_52.png)
+![5p](/images/250624_53.png)
