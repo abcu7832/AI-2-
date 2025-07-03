@@ -48,10 +48,18 @@ cv2.waitKey(0)
 cv2.imwrite("output.png", img)
 cv2.destroyAllwindows()
 ```
+* 원본사진
 ![3p최형우](/images/250624_6.png)
-
-* Crop / Resize
+* bgr
 ![4p](/images/250624_7.png)
+![4p](/images/250624_8.png)
+![4p](/images/250624_9.png)
+* hsv
+![4p](/images/250624_10.png)
+![4p](/images/250624_11.png)
+![4p](/images/250624_12.png)
+* Crop / Resize
+![4p](/images/250624_13.png)
 ```python
 import cv2
 
@@ -67,8 +75,9 @@ cv2.imshow("Resized image", resized)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![4p](/images/250624_8.png)
+![4p](/images/250624_14.png)
 * Reverse Image(역상)
+![4p](/images/250624_15.png)
 ```python
 import cv2
 
@@ -80,7 +89,11 @@ cv2.imshow("dst", dst)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-![5p](/images/250624_9.png)
+![5p](/images/250624_16.png)
+![5p](/images/250624_17.png)
+![5p](/images/250624_18.png)
+![5p](/images/250624_19.png)
+![5p](/images/250624_20.png)
 ```python
 # bit operation
 import cv2
