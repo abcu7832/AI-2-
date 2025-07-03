@@ -98,6 +98,10 @@ cv2.destroyAllWindows()
 ![5p](/images/250624_18.png)
 ![5p](/images/250624_19.png)
 ![5p](/images/250624_20.png)
+
+* Binary
+-------------
+![5p](/images/250624_21.png)
 ```python
 # bit operation
 import cv2
