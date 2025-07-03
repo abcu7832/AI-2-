@@ -95,11 +95,10 @@ cv2.imshow("dst", dst)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-![r](/images/250624_16.png)
+![r](/images/250624_16_18_19.png)
 ![s](/images/250624_17.png)
-![d](/images/250624_18.png)
-![e](/images/250624_19.png)
-![c](/images/250624_20.png)
+![d](/images/250624_16_18_19.png)
+![e](/images/250624_16_18_19.png)
 
 * Binary
 -------------
