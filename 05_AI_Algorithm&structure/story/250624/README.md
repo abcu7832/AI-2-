@@ -144,6 +144,7 @@ cv2.destroyAllWindows()
 ![5p](/images/250624_23.png)
 
 * edge detection
+--------------------------
 ![5p](/images/250624_24.png)
 ```python
 import cv2
@@ -165,14 +166,18 @@ cv2.waitKey()
 cv2.destroyAllWindows()
 ```
 * Sobel edge detect
+---------------------------------
 ![5p](/images/250624_25.png)
 * Laplacian 변환 Edge detect
+---------------------------------
 ![5p](/images/250624_26.png)
 * Canny Edge Detection
+---------------------------------
 ![5p](/images/250624_27.png)
 => 가장 뚜렷한 edge 검출
 
 * add Weighted
+-------------------------------------
 ![5p](/images/250624_28.png)
 ```python
 import cv2
