@@ -429,8 +429,14 @@ while(cap.isOpened()):
 cap.release()
 cv2.destroyAllWindows()
 ```
+* 기본
+![5p](/images/250624_48.png)
+* 두께 변경
 ![5p](/images/250624_49.png)
+* 크기 변경
 ![5p](/images/250624_50.png)
+* 색 변경
 ![5p](/images/250624_51.png)
+* 색 변경
 ![5p](/images/250624_52.png)
 ![5p](/images/250624_53.png)
