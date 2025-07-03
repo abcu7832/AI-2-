@@ -335,12 +335,11 @@ cv2.destroyAllWindows()
 ![5p](/images/250624_44.png)
 ![5p](/images/250624_45.png)
 ![5p](/images/250624_46.png)
-![5p](/images/250624_47.png)
 
 -----------------------------------------------------
 * GUI Input 활용하기(TRACKBAR)
 -------------------------
-![5p](/images/250624_48.png)
+![5p](/images/250624_47.png)
 ```python
 import cv2
 
