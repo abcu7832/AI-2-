@@ -290,8 +290,7 @@ cv2.destroyAllWindows()
 ```
 * 문제점: 동영상이 빠르게 재생된 후, 종료. 해결방안: cv2.waitKey(55)로 변경
 ![5p](/images/250624_39.png)
-----------------------------
-* ‘c’를 입력한 후 capture 된 사진. 파일명도 capture_0.jpg 로 의도한 대로 동작한 것을 확인.
+-> ‘c’를 입력한 후 capture 된 사진. 파일명도 capture_0.jpg 로 의도한 대로 동작한 것을 확인.
 -----------------------
 * GUI Input 활용하기(TEXT/LINE/RECTANGLE)
 --------
