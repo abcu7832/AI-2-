@@ -79,6 +79,8 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 ![4p](/images/250624_14.png)
+
+
 * Reverse Image(역상)
 -----------------------------
 ![4p](/images/250624_15.png)
@@ -93,11 +95,11 @@ cv2.imshow("dst", dst)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
-![5p](/images/250624_16.png)
-![5p](/images/250624_17.png)
-![5p](/images/250624_18.png)
-![5p](/images/250624_19.png)
-![5p](/images/250624_20.png)
+![r](/images/250624_16.png)
+![s](/images/250624_17.png)
+![d](/images/250624_18.png)
+![e](/images/250624_19.png)
+![c](/images/250624_20.png)
 
 * Binary
 -------------
