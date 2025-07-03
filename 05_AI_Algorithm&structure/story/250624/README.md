@@ -58,8 +58,10 @@ cv2.destroyAllwindows()
 ![4p](/images/250624_10.png)
 ![4p](/images/250624_11.png)
 ![4p](/images/250624_12.png)
+
 * Crop / Resize
 ![4p](/images/250624_13.png)
+
 ```python
 import cv2
 
