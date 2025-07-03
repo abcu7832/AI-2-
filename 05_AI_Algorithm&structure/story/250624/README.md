@@ -60,6 +60,7 @@ cv2.destroyAllwindows()
 ![4p](/images/250624_12.png)
 
 * Crop / Resize
+---------------------
 ![4p](/images/250624_13.png)
 
 ```python
@@ -79,6 +80,7 @@ cv2.destroyAllWindows()
 ```
 ![4p](/images/250624_14.png)
 * Reverse Image(역상)
+-----------------------------
 ![4p](/images/250624_15.png)
 ```python
 import cv2
