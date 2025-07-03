@@ -97,7 +97,7 @@ cv2.destroyAllWindows()
 ```
 ![s](/images/250624_17.png)
 
-* Binary
+* bit operation
 -------------
 ![5p](/images/250624_21.png)
 ```python
@@ -109,10 +109,10 @@ dst2 = cv2.bitwise_and(src, src)
 dst3 = cv2.bitwise_or(src, src)
 dst4 = cv2.bitwise_xor(src, src)
 cv2.imshow("src", src)
-cv2.imshow("NOT", dst1)
+#cv2.imshow("NOT", dst1)
 cv2.imshow("AND", dst2)
 cv2.imshow("OR", dst3)
-cv2.imshow("XOR", dst4)
+#cv2.imshow("XOR", dst4)
 cv2.waitKey()
 cv2.destroyAllWindows()
 ```
@@ -123,7 +123,8 @@ cv2.destroyAllWindows()
 * OR
 ![r](/images/250624_16_18_19.png)
 
-* Edge Detection
+* binary
+------------------------------------
 ![5p](/images/250624_21.png)
 ```python
 import cv2
