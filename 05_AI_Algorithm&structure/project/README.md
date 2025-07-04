@@ -1,4 +1,5 @@
-## 온디바이스 AI project
+# 온디바이스 AI project
+## AI 시험 감독관
 * raspberry pi 5
 * python
 * linux terminal
