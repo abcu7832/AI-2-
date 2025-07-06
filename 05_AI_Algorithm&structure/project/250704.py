@@ -1,5 +1,3 @@
-# 250704 프로젝트 진행상황
-* 각자 개발한 기술 merge
 ```python
 # AI 시험 감독관
 import cv2
