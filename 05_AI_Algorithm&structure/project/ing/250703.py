@@ -1,3 +1,4 @@
+*********************************************face recognition*****************************************
 # face recognition
 import cv2
 import face_recognition
@@ -86,10 +87,8 @@ while cap.isOpened():
 cap.release()
 out.release()
 cv2.destroyAllWindows()
-```
 
-* dataset 구축
-```python
+*****************************************************dataset 구축*****************************************
 # dataset 구축
 import numpy as np
 import cv2
