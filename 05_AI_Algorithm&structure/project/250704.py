@@ -1,4 +1,3 @@
-```python
 # AI 시험 감독관
 import cv2
 import mediapipe as mp
@@ -931,4 +930,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
