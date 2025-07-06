@@ -1,6 +1,3 @@
-# 250703 프로젝트 진행상황
-* face recognition 구현
-```python
 # face recognition
 import cv2
 import face_recognition
@@ -163,6 +160,3 @@ cap.release()
 
 out.release()
 cv2.destroyAllWindows()
-
-```
-* 현재 확보된 데이터셋: KBS 아나운서(30명), 팀원 4명 -> 총 34명
