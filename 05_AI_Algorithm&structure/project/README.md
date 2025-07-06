@@ -4,3 +4,8 @@
 * python
 * linux terminal
 
+## 파일 설명
+* ing: 프로젝트 진행 과정
+* PLAN: 프로젝트 진행 계획
+* diary: 프로젝트 진행 중 일기
+* result: 프로젝트 결과물
