@@ -3,3 +3,6 @@
 ## 언어: Python
 ## 환경: LINUX (Ubuntu)
 ## 250623~250711
+## 설명
+* project: 프로젝트
+* story: 수업진행내용
