@@ -1,5 +1,5 @@
 # 과목명: 시스템 반도체 설계
-## 언어: Verilog
+## RTL: Verilog
 ## TOOL
 * Vivado
 * VS code
