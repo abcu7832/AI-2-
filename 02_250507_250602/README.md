@@ -1,6 +1,6 @@
 ## 과목: 시스템 반도체 설계
-![Verilog](https://img.shields.io/badge/Verilog-white)
-![Vivado](https://img.shields.io/badge/Vivado_2020.2-white)
+![Verilog](https://img.shields.io/badge/Verilog-grey)
+![Vivado](https://img.shields.io/badge/Vivado_2020.2-grey)
 ![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
 ![FPGA](https://img.shields.io/badge/FPGA-Basys3-blue)
 
