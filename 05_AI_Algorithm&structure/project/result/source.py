@@ -29,7 +29,6 @@ class SimpleExamSupervisor:
     """단순화된 AI 시험 감독관 - 원본 기능 완전 보존"""
     
     def __init__(self):
-        # === 원본 초기화 로직 그대로 ===
         self.setup_config()
         self.setup_mediapipe()
         self.setup_variables()
@@ -43,7 +42,6 @@ class SimpleExamSupervisor:
         print("🔒 AI 시험 감독관 시스템 v2.6 (단순화) 초기화 완료")
         
     def setup_config(self):
-        """원본과 동일한 설정"""
         default_config = {
             "camera": {"index": 0, "width": 640, "height": 480, "fps": 20, "mirror": True},
             "detection": {"x_threshold": 0.15, "y_threshold": 0.5, "sustained_time": 2.0, 
@@ -71,7 +69,7 @@ class SimpleExamSupervisor:
             config = default_config
             
         self.config = config
-        # 설정값 적용 (원본과 동일)
+        # 설정값 적용
         self.CAMERA_INDEX = config["camera"]["index"]
         self.CAMERA_WIDTH = config["camera"]["width"]
         self.CAMERA_HEIGHT = config["camera"]["height"]
@@ -97,7 +95,7 @@ class SimpleExamSupervisor:
         self.MAX_WARNINGS = config["system"]["max_warnings"]
         
     def setup_mediapipe(self):
-        """MediaPipe 초기화 (원본과 동일)"""
+        """MediaPipe 초기화"""
         self.mp_face_mesh = mp.solutions.face_mesh
         self.face_mesh = self.mp_face_mesh.FaceMesh(
             refine_landmarks=True, static_image_mode=False, max_num_faces=2,
@@ -105,7 +103,7 @@ class SimpleExamSupervisor:
         )
         self.mp_drawing = mp.solutions.drawing_utils
         
-        # 랜드마크 포인트들 (원본과 동일)
+        # 랜드마크 포인트들
         self.NOSE_TIP = 1
         self.LEFT_EYE_LEFT = 33
         self.RIGHT_EYE_RIGHT = 263
@@ -120,7 +118,7 @@ class SimpleExamSupervisor:
         self.MAX_EAR_HISTORY = 100
         
     def setup_variables(self):
-        """상태 변수 초기화 (원본과 동일)"""
+        """상태 변수 초기화"""
         # 시스템 상태
         self.system_phase = "IDLE"
         self.authenticated_user = None
@@ -128,7 +126,7 @@ class SimpleExamSupervisor:
         self.exam_terminated = False
         self.termination_reason = ""
         
-        # 경고 시스템 (원본과 동일)
+        # 경고 시스템
         self.total_warnings = 0
         self.head_warnings = 0
         self.gaze_warnings = 0
@@ -148,7 +146,7 @@ class SimpleExamSupervisor:
         self.total_violations = 0
         self.identity_attempts = 0
         
-        # 위반 상태들 (원본과 동일)
+        # 위반 상태들
         self.reset_violation_states()
         
         # 폴더 생성
@@ -236,7 +234,7 @@ class SimpleExamSupervisor:
         control_frame = ttk.LabelFrame(parent, text="🎛️ 시스템 제어")
         control_frame.pack(fill="x", pady=(0, 10), padx=5)
         
-        # 버튼들 (원본 기능 유지)
+        # 버튼들
         tk.Button(control_frame, text="▶️ 시스템 시작", command=self.start_system,
                  bg="#28a745", fg="white", font=("Arial", 11, "bold")).pack(fill="x", pady=5, padx=10)
         
@@ -259,7 +257,7 @@ class SimpleExamSupervisor:
         self.log_text.pack(fill="both", expand=True, padx=10, pady=10)
         
     # =====================================
-    # 메인 로직 (원본 그대로 유지)
+    # 메인 로직
     # =====================================
     
     def start_system(self):
@@ -267,7 +265,7 @@ class SimpleExamSupervisor:
         if self.is_running:
             return
             
-        # 카메라 찾기 (원본 로직)
+        # 카메라 찾기
         self.cap = self.find_camera()
         if self.cap is None:
             messagebox.showerror("오류", "카메라를 찾을 수 없습니다!")
@@ -280,7 +278,7 @@ class SimpleExamSupervisor:
         self.update_loop()
         
     def find_camera(self):
-        """카메라 찾기 (원본과 동일)"""
+        """카메라 찾기"""
         camera_indices = [self.CAMERA_INDEX] + [i for i in range(5) if i != self.CAMERA_INDEX]
         
         for camera_idx in camera_indices:
@@ -302,7 +300,7 @@ class SimpleExamSupervisor:
         return None
         
     def update_loop(self):
-        """메인 업데이트 루프 (Queue 없이 직접 처리)"""
+        """메인 업데이트 루프"""
         if not self.is_running or self.cap is None:
             return
             
@@ -316,7 +314,7 @@ class SimpleExamSupervisor:
             
         self.current_frame = frame.copy()
         
-        # 단계별 처리 (원본 로직)
+        # 단계별 처리
         if self.system_phase == "IDENTITY_CHECK":
             self.process_identity_frame(frame)
         elif self.system_phase == "EXAM_MONITORING":
@@ -330,7 +328,7 @@ class SimpleExamSupervisor:
         self.root.after(33, self.update_loop)  # ~30 FPS
         
     def update_camera_display(self, frame):
-        """카메라 화면 업데이트 (Queue 없이 직접)"""
+        """카메라 화면 업데이트"""
         try:
             # BGR to RGB
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -352,7 +350,7 @@ class SimpleExamSupervisor:
             pass
             
     def update_status_display(self):
-        """상태 정보 직접 업데이트 (Queue 없음)"""
+        """상태 정보 직접 업데이트"""
         # 사용자 상태
         if self.authenticated_user:
             self.user_label.configure(text=self.authenticated_user, fg="green")
@@ -412,7 +410,7 @@ class SimpleExamSupervisor:
         speak_tts("신원 조회를 시작합니다. 카메라를 바라봐 주세요.")
         
     def process_identity_frame(self, frame):
-        """신원 확인 프레임 처리 (원본 로직)"""
+        """신원 확인 프레임 처리"""
         if not hasattr(self, 'blink_detection_active') or not self.blink_detection_active:
             return
             
@@ -428,7 +426,7 @@ class SimpleExamSupervisor:
                 for face_landmarks in results.multi_face_landmarks:
                     landmarks = face_landmarks.landmark
                     
-                    # EAR 계산 (원본 함수)
+                    # EAR 계산
                     left_ear = self.calculate_ear(landmarks, self.LEFT_EYE_EAR)
                     right_ear = self.calculate_ear(landmarks, self.RIGHT_EYE_EAR)
                     ear = (left_ear + right_ear) / 2.0
@@ -504,7 +502,7 @@ class SimpleExamSupervisor:
                 self.system_phase = "IDLE"
                 
     # =====================================
-    # 시험 감독 (원본 로직 보존)
+    # 시험 감독
     # =====================================
     
     def start_monitoring(self):
@@ -536,7 +534,7 @@ class SimpleExamSupervisor:
         speak_tts("시험 감독이 시작되었습니다.")
         
     def process_monitoring_frame(self, frame):
-        """시험 감독 프레임 처리 (원본 로직 그대로)"""
+        """시험 감독 프레임 처리"""
         if self.exam_terminated:
             return
             
@@ -558,10 +556,10 @@ class SimpleExamSupervisor:
             best_face = results.multi_face_landmarks[0]
             current_landmarks = self.get_landmarks_coords(best_face, img_w, img_h)
             
-            # 머리 방향 (원본 함수)
+            # 머리 방향
             head_direction, x_ratio, y_ratio = self.get_head_direction(current_landmarks, img_w, img_h)
             
-            # 시선 분석 (원본 함수)
+            # 시선 분석
             landmarks_normalized = [(lm.x, lm.y) for lm in best_face.landmark]
             gaze_left = self.get_gaze_ratio(self.LEFT_EYE, landmarks_normalized, frame, gray)
             gaze_right = self.get_gaze_ratio(self.RIGHT_EYE, landmarks_normalized, frame, gray)
@@ -608,10 +606,10 @@ class SimpleExamSupervisor:
             else:
                 self.gaze_label.configure(text="정면", fg="green")
                     
-        # 위반 상태 업데이트 (원본 함수 - 핵심!)
+        # 위반 상태 업데이트
         self.update_violation_states(face_count, head_direction, gaze_ratio)
         
-        # 화면에 정보 표시 (원본 함수)
+        # 화면에 정보 표시
         self.draw_status_info(frame, face_count, head_direction, gaze_ratio, x_ratio, y_ratio)
         
     def stop_system(self):
@@ -626,7 +624,7 @@ class SimpleExamSupervisor:
     # =====================================
     
     def calculate_ear(self, landmarks, eye_indices):
-        """EAR 계산 (원본과 동일)"""
+        """EAR 계산"""
         try:
             left = np.array([landmarks[eye_indices[0]].x, landmarks[eye_indices[0]].y])
             right = np.array([landmarks[eye_indices[3]].x, landmarks[eye_indices[3]].y])
@@ -643,7 +641,7 @@ class SimpleExamSupervisor:
             return 0.0
             
     def compare_with_dataset(self, captured_image_path):
-        """데이터셋 비교 (원본과 동일)"""
+        """데이터셋 비교"""
         try:
             known_encodings = []
             known_names = []
@@ -711,7 +709,7 @@ class SimpleExamSupervisor:
             return None
             
     def get_landmarks_coords(self, face_landmarks, image_w, image_h):
-        """랜드마크 좌표 변환 (원본과 동일)"""
+        """랜드마크 좌표 변환"""
         coords = []
         for landmark in face_landmarks.landmark:
             x = int(landmark.x * image_w)
@@ -720,7 +718,7 @@ class SimpleExamSupervisor:
         return np.array(coords)
         
     def get_head_direction(self, landmarks, image_w, image_h):
-        """머리 방향 판단 (원본과 동일)"""
+        """머리 방향 판단"""
         nose_tip = landmarks[self.NOSE_TIP]
         left_eye_left = landmarks[self.LEFT_EYE_LEFT]
         right_eye_right = landmarks[self.RIGHT_EYE_RIGHT]
@@ -754,7 +752,7 @@ class SimpleExamSupervisor:
             return "Forward", x_ratio, y_ratio
             
     def get_gaze_ratio(self, eye_indices, landmarks, frame, gray):
-        """시선 방향 계산 (원본과 동일)"""
+        """시선 방향 계산"""
         h, w = frame.shape[:2]
         
         try:
@@ -806,7 +804,7 @@ class SimpleExamSupervisor:
             return 1.0
             
     def reset_violation_states(self):
-        """위반 상태 초기화 (원본과 동일)"""
+        """위반 상태 초기화"""
         self.is_head_abnormal = False
         self.head_abnormal_start_time = time.time()
         self.is_head_violation = False
@@ -824,7 +822,7 @@ class SimpleExamSupervisor:
         self.is_gaze_violation = False
         
     def update_violation_states(self, face_count, head_direction, gaze_ratio):
-        """위반 상태 업데이트 (원본 로직 완전 보존 - 핵심!)"""
+        """위반 상태 업데이트"""
         current_time = time.time()
         
         # 시험이 이미 중단된 경우 처리 중지
@@ -924,7 +922,7 @@ class SimpleExamSupervisor:
                     self.print_warning("시선 이탈", f"{direction} 시선 (편차: {deviation:.2f})", duration)
                     
     def terminate_exam(self, reason):
-        """시험 중단 (원본과 동일)"""
+        """시험 중단"""
         self.exam_terminated = True
         self.termination_reason = reason
         
@@ -967,7 +965,7 @@ class SimpleExamSupervisor:
         return False
         
     def print_violation_alert(self, violation_type, details, is_start=True, duration=0):
-        """위반 사항 터미널 알림 (원본과 동일)"""
+        """위반 사항 터미널 알림"""
         timestamp = datetime.now().strftime("%H:%M:%S")
         
         if is_start:
@@ -983,7 +981,7 @@ class SimpleExamSupervisor:
             self.log_message(f"위반 종료: {violation_type} (총 지속시간: {duration:.1f}초)", "SUCCESS")
             
     def print_warning(self, warning_type, details, duration):
-        """경고 사항 터미널 출력 (원본과 동일)"""
+        """경고 사항 터미널 출력"""
         timestamp = datetime.now().strftime("%H:%M:%S")
         
         progress = min(duration / self.SUSTAINED_TIME, 1.0) * 100
@@ -994,7 +992,7 @@ class SimpleExamSupervisor:
         self.log_message(f"⚠️  {warning_type}: {details} [{bar}] {progress:.0f}% ({duration:.1f}s)", "WARNING")
         
     def log_violation(self, violation_type, details):
-        """위반 사항 로그 기록 (원본과 동일)"""
+        """위반 사항 로그 기록"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_entry = {
             "timestamp": timestamp,
@@ -1010,7 +1008,7 @@ class SimpleExamSupervisor:
         self.total_violations += 1
         
     def draw_status_info(self, frame, face_count, head_direction, gaze_ratio, x_ratio, y_ratio):
-        """화면에 상태 정보 표시 (원본과 동일)"""
+        """화면에 상태 정보 표시"""
         current_time = time.time()
         exam_duration = int(current_time - self.exam_start_time) if self.exam_start_time else 0
         
@@ -1088,7 +1086,7 @@ class SimpleExamSupervisor:
                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255) if self.total_violations > 0 else (0, 255, 0), 2)
         
     # =====================================
-    # 유틸리티 함수들
+    # 유틸리티 함수
     # =====================================
         
     def log_message(self, message, level="INFO"):
@@ -1136,7 +1134,7 @@ class SimpleExamSupervisor:
             self.root.destroy()
 
 # =====================================
-# TTS 함수 (원본과 동일)
+# TTS 함수
 # =====================================
 
 def tts_worker_thread():
