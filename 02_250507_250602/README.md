@@ -2,7 +2,7 @@
 ![Verilog](https://img.shields.io/badge/Verilog-white)
 ![Vivado](https://img.shields.io/badge/Vivado_2020.2-white)
 ![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
-![FPGA](https://img.shields.io/badge/FPGA-Basys3-white)
+![FPGA](https://img.shields.io/badge/FPGA-white-Basys3-grey)
 
 ## STORY(수업내용)
 * Verilog 연습
