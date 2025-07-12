@@ -1,4 +1,4 @@
-# OnDevice AI project
+## OnDevice AI project
 ![linux terminal](https://img.shields.io/badge/LINUX-FFD700?style=flat&logo=opencv&logoColor=4CAF50)
 ![Raspberry Pi](https://img.shields.io/badge/Device-Raspberry%20Pi_5-red?logo=raspberrypi&logoColor=red)
 ![Python](https://img.shields.io/badge/Python_3.10-blue?logo=python&logoColor=003366)
