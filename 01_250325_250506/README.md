@@ -1,7 +1,7 @@
 # 과목명: 시스템프로그래밍
 ## 임베디드 SW
 ![Verilog](https://img.shields.io/badge/Embedded_SW-yellow)
-![Verilog](https://img.shields.io/badge/C-yellow)
+![Verilog](https://img.shields.io/badge/C-green)
 ![arm](https://img.shields.io/badge/STM32F103-red)
 ![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
 ![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
