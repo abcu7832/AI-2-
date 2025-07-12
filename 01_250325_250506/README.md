@@ -4,7 +4,7 @@
 ![Verilog](https://img.shields.io/badge/C-green)
 ![arm](https://img.shields.io/badge/STM32F103-red)
 ![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
-![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
+
 # 250325~250506
 * 250325 ~ 250330: C언어 실습
 * 250331 ~ 250404: AI 실습
