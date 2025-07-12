@@ -1,7 +1,7 @@
 ## 과목: 시스템 반도체 설계
 ![Verilog](https://img.shields.io/badge/Verilog-grey)
 ## TOOL
-![Vivado](https://img.shields.io/badge/Vivado-2025.2-brightgreen?style=for-the-badge&logo=xilinx&logoColor=white)
+![Vivado](https://img.shields.io/badge/Vivado-2020.2-brightgreen?style=for-the-badge&logo=xilinx&logoColor=white)
 * VS code
 * FPGA: Basys3(DIGILENT)
 ## STORY(수업내용)
