@@ -1,6 +1,6 @@
 ## OnDevice AI project
 ![linux terminal](https://img.shields.io/badge/LINUX-grey?style=flat&logo=Ubuntu&logoColor=orange)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi_5-grey?logo=raspberrypi&logoColor=red)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi_5-grey?style=flat?logo=raspberrypi&logoColor=red)
 ![Python](https://img.shields.io/badge/Python_3.10-grey?style=flat&logo=python&logoColor=007ACC)
 ## PROJECT TITLE: AI EXAM SUPERVISOR(AI 시험 감독관)
 * GROUP NAME: NUGABA (7th group)
