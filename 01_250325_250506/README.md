@@ -1,5 +1,7 @@
 # 과목명: 시스템프로그래밍
-## 언어: C
+![Verilog](https://img.shields.io/badge/C-yellow)
+![VSCODE](https://img.shields.io/badge/VSCODE-grey?style=flat&logo=github&logoColor=blue)
+![arm](https://img.shields.io/badge/STM32F103-red)
 ## 사용장비: ARM CORETEX M3 STM32F103
 ## 임베디드 SW
 # 250325~250506
