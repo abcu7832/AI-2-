@@ -1,9 +1,10 @@
 # OnDevice AI project
 * GROUP NAME: NUGABA (7th group)
 ## PROJECT NAME: AI EXAM SUPERVISOR(AI 시험 감독관)
-![Python](https://img.shields.io/badge/Python_3.10-blue?logo=python&logoColor=003366)
-![Raspberry Pi](https://img.shields.io/badge/Device-Raspberry%20Pi_5-red?logo=raspberrypi&logoColor=red)
 ![linux terminal](https://img.shields.io/badge/LINUX-FFD700?style=flat&logo=opencv&logoColor=4CAF50)
+![Raspberry Pi](https://img.shields.io/badge/Device-Raspberry%20Pi_5-red?logo=raspberrypi&logoColor=red)
+![Python](https://img.shields.io/badge/Python_3.10-blue?logo=python&logoColor=003366)
+
 ## 설명
 * ing: 프로젝트 진행 과정
 * PLAN: 프로젝트 진행 계획
