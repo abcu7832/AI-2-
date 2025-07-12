@@ -1,5 +1,5 @@
 ## OnDevice AI project
-![linux terminal](https://img.shields.io/badge/LINUX-grey?style=flat&logo=Ubuntu&logoColor=orange)
+![linux terminal](https://img.shields.io/badge/LINUX-black-D3D3D3?style=flat&logo=ubuntu&logoColor=orange)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi_5-white?logo=raspberrypi&logoColor=CC0000)
 ![Python](https://img.shields.io/badge/Python_3.10-grey?style=flat&logo=python&logoColor=007ACC)
 ## PROJECT TITLE: AI EXAM SUPERVISOR(AI 시험 감독관)
