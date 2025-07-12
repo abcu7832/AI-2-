@@ -373,7 +373,7 @@ class SimpleExamSupervisor:
         self.warning_label.configure(text=f"{self.total_warnings}/{self.MAX_WARNINGS}", fg=color)
         
     # =====================================
-    # 신원 확인 (원본 로직 보존)
+    # 신원 확인
     # =====================================
     
     def start_identity(self):
@@ -502,7 +502,7 @@ class SimpleExamSupervisor:
                 self.system_phase = "IDLE"
                 
     # =====================================
-    # 시험 감독
+    #               시험 감독
     # =====================================
     
     def start_monitoring(self):
@@ -620,7 +620,7 @@ class SimpleExamSupervisor:
         self.log_message("시스템이 중지되었습니다.", "WARNING")
         
     # =====================================
-    # 원본 함수들 (수정 없이 그대로) - 핵심 부정행위 탐지!
+    #         핵심 부정행위 탐지!
     # =====================================
     
     def calculate_ear(self, landmarks, eye_indices):
@@ -937,7 +937,7 @@ class SimpleExamSupervisor:
         self.log_violation("부정행위-시험중단", reason)
         
     def issue_warning(self, warning_type, details):
-        """경고 발급 (통합 5회 시스템 - 원본과 동일)"""
+        """경고 발급 (통합 5회 시스템)"""
         # 개별 경고 횟수 증가 (표시용)
         if warning_type == "고개 방향":
             self.head_warnings += 1
