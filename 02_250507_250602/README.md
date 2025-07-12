@@ -1,5 +1,5 @@
 ## 과목: 시스템 반도체 설계
-![Python](https://img.shields.io/badge/Verilog)
+![Verilog](https://img.shields.io/badge/Verilog?)
 ## TOOL
 * Vivado
 * VS code
