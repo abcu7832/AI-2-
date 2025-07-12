@@ -5,7 +5,7 @@
 ![Raspberry Pi](https://img.shields.io/badge/Device-Raspberry%20Pi_5-red?logo=raspberrypi&logoColor=red)
 ![Python](https://img.shields.io/badge/Python_3.10-blue?logo=python&logoColor=003366)
 
-## 설명
+## Directory Description
 * ing: 프로젝트 진행 과정
 * PLAN: 프로젝트 진행 계획
 * diary: 프로젝트 진행 중 일기
