@@ -1,5 +1,6 @@
 # OnDevice AI project
-## AI 시험 감독관
+## GROUP NAME: NUGABA (7th group)
+## PROJECT NAME: AI EXAM SUPERVISOR(AI 시험 감독관)
 * raspberry pi 5
 * python
 * linux terminal
