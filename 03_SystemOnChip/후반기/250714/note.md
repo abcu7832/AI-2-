@@ -26,6 +26,7 @@
 ![images_mnist_모델](/images/250714_verilog4.png)
 -------------------------------------------
 ![images_mnist_모델](/images/250714_synthesis1.png)
+### frontend engineer가 주로 생각해야하는 사항은 setup / hold time은 pnr layout과정에서 조정가능
 ![images_mnist_모델](/images/250714_synthesis4.png)
 ![images_mnist_모델](/images/250714_synthesis2.png)
 ![images_mnist_모델](/images/250714_synthesis3.png)
