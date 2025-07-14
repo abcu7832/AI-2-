@@ -3,4 +3,4 @@
 ![Verilog](https://img.shields.io/badge/Verilog-grey?logo=python&logoColor=yellow)
 ![SystemVerilog](https://img.shields.io/badge/SystemVerilog-grey?logo=python&logoColor=yellow)
 * 전반기: 250604~250613 
-* 후반기: ?
+* 후반기: 250714~250805
