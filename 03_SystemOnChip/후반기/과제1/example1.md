@@ -2,9 +2,11 @@
 ### 이론 정리
 ![filter](/images/250716_6.png)
 ![filter](/images/250716_4.png)
-
-
-* 구조 구현은 shift register를 이용하기로 결정!!!
+### 구조
+* input: fixed: <1.6>
+* coefficient: fixed: <1.8>
+* output: fixed: <1.6>
+* 구현은 shift register를 이용하기로 결정!!!
 * coefficient 값 정리
 ![coefficient](/images/250716_5.png)
 ### 코드
