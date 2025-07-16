@@ -170,7 +170,7 @@ end
 endmodule
 
 ```
-### RRC Filter simulation
+### RRC Filter simulation in matlab
 ```matlab
 clc
 
