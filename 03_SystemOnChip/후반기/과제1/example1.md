@@ -9,7 +9,7 @@
 ```systemverilog
 `timescale 1ns / 1ps
 
-module fir_filter #(
+module rrc_filter #(
     parameter DATA_WIDTH = 7,
     parameter COEFF_WIDTH = 16,
     parameter TAP_NUM = 33,
@@ -101,7 +101,7 @@ logic clk, rstn;
 logic [6:0] data_in;
 logic [6:0] data_out;
 
-fir_filter DUT (
+rrc_filter DUT (
     .clk(clk),
     .rstn(rstn),
     .data_in(data_in), // <1.6>
