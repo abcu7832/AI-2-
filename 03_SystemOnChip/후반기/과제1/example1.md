@@ -1,4 +1,7 @@
-### RRC Filter(Root Raised Cosine Filter)
+## RRC Filter(Root Raised Cosine Filter)
+### 이론 정리
+![filter](/images/250716_6.png)
+![filter](/images/250716_4.png)
 ```systemverilog
 `timescale 1ns / 1ps
 
