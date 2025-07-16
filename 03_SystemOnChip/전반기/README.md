@@ -1,4 +1,3 @@
-
 ### 일정  
 - **250604:** 간단한 Verilog 실습 및 Verdi 시뮬레이션 확인  
 - **250605:** Verdi simulation Linux command 익히기  
