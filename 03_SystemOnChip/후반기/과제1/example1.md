@@ -2,6 +2,9 @@
 ### 이론 정리
 ![filter](/images/250716_6.png)
 ![filter](/images/250716_4.png)
+
+
+* 구조 구현은 shift register를 이용하기로 결정!!!
 ```systemverilog
 `timescale 1ns / 1ps
 
