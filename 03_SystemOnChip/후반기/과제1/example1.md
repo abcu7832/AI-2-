@@ -5,9 +5,9 @@
 
 
 * 구조 구현은 shift register를 이용하기로 결정!!!
-### 코드
 * coefficient 값 정리
 ![coefficient](/images/250716_5.png)
+### 코드
 ```systemverilog
 `timescale 1ns / 1ps
 
