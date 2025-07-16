@@ -9,7 +9,8 @@
 * coefficient 값 정리
 
 
-![filter](/images/250716_5.png)
+
+![coefficient](/images/250716_5.png)
 ```systemverilog
 `timescale 1ns / 1ps
 
