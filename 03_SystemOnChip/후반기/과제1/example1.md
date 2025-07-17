@@ -23,18 +23,18 @@ set io_dly   0.05
 
 
 #set per200  "5.00";  # ns -> 200 MHz
-#set per1000  "1000.00";  # ps -> 200 MHz
-set per1250 "800.00";
+set per1000  "1000.00";  # ps -> 200 MHz
+#set per1250 "800.00";
 
 #set dont_care   "2"; 
 #set min_delay   "0.3"; 
 
 #set clcon_clk_name "CLK"
-set cnt_clk_period "[expr {$per1250*$CLK_MGN}]" 
+set cnt_clk_period "[expr {$per1000*$CLK_MGN}]" 
 set cnt_clk_period_h "[expr {$cnt_clk_period/2.0}]"
 
 ### I/O DELAY per clock speed
-set cnt_clk_delay         [expr "$per1250 * $CLK_MGN * $io_dly"] 
+set cnt_clk_delay         [expr "$per1000 * $CLK_MGN * $io_dly"] 
 
 #-----------------------------------------------------------------------
 #  Create  Clock(s)
