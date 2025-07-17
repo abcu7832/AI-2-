@@ -90,8 +90,6 @@ set_input_delay     500    -clock cnt_clk  [get_ports clk]
 #set_dont_touch dtop_l*/prcon_caltop/i2c_reg_prc_cal/U_i2cregclk
 
 #set_dont_use [get_lib_cells */TIE*]
-
-
 ```
 ### 코드
 ```systemverilog
