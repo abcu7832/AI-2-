@@ -287,9 +287,11 @@ end
 endmodule
 ```
 ### 합성 결과
-
+![filter](/images/250717_2.png)
 ### gate simulation
-
+![filter](/images/250717_3.png)
+### 어제 pipe register가 없는 구조와 결과 비교
+![filter](/images/250717_4.png)
 ### 필터가 Low pass filter 역할을 잘해주는 모습
 ### X축 (정규화 주파수): 신호에 포함된 주파수 성분을 나타냅니다. 0은 직류(DC) 성분, 1은 나이퀴스트 주파수(샘플링 주파수의 절반)에 해당
 ### Y축 (전력/주파수): 각 주파수 성분이 얼마나 강한 에너지를 갖는지를 데시벨(dB) 단위
