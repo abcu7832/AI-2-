@@ -1,7 +1,7 @@
 ## RRC Filter(Root Raised Cosine Filter) with pipe register
 ## 이론 정리
 ### 구조
-* 과제1 example1.md 내용과 동일
+* 과제1 example1.md 내용과 대부분 동일, but setup violation을 없애기 위한 pipe register 추가한 구조
 
 
 
