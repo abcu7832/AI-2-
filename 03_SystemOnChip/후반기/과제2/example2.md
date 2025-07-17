@@ -7,6 +7,7 @@
 * output: fixed: <1.6>
 * 구현은 shift register를 이용하기로 결정!!!
 * coefficient 값 정리
+* 과제1 example1.md 내용과 동일
 ![coefficient](/images/250716_5.png)
 ### 코드
 ```systemverilog
