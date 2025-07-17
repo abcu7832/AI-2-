@@ -94,8 +94,6 @@ set_input_delay     500    -clock cnt_clk  [get_ports clk]
 
 ```
 ### 문제발생
-
-
 ![setuptime_violation](/images/250716_5.png)
 ### 코드
 ```systemverilog
@@ -110,7 +108,7 @@ module fir_filter #(
     input  logic clk,
     input  logic rstn,
     input  logic signed [DATA_WIDTH-1:0] data_in,
-    output logic signed [DATA_WIDTH + COEFF_WIDTH + 6 - 1:0] acc
+    output logic signed [DATA_WIDTH + COEFF_WIDTH + 6 - 1:0] data_out
 );
 
     // Shift register (Stage 1)
@@ -175,6 +173,7 @@ module fir_filter #(
     logic signed [DATA_WIDTH + COEFF_WIDTH - 3:0] scaled;
     integer k;
 
+    logic signed [DATA_WIDTH + COEFF_WIDTH + 6 - 1:0] acc;
     always_comb begin
         acc = mult_result[0] + mult_result[1] + mult_result[2] + mult_result[3] + mult_result[4] + mult_result[5] + mult_result[6] + mult_result[7] + mult_result[8] + mult_result[9] + mult_result[10] + mult_result[11] + mult_result[12] + mult_result[13] + mult_result[14] + mult_result[15] + mult_result[16] + mult_result[17] + mult_result[18] + mult_result[19] + mult_result[20] + mult_result[21] + mult_result[22] + mult_result[23] + mult_result[24] + mult_result[25] + mult_result[26] + mult_result[27] + mult_result[28] + mult_result[29] + mult_result[30] + mult_result[31] + mult_result[32]; 
 	      scaled = acc >>> SCALE_SHIFT;
