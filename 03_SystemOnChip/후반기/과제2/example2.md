@@ -7,6 +7,9 @@
 
 ![filter](/images/250717_1.png)
 
+
+
+=> setup vioation을 방지하기 위해 연산과정에서 pipe register 추가
 ### 환경
 * sdc파일
 ```bash
