@@ -116,7 +116,81 @@ endmodule
 ### RRC Filtertestbench 
 * data_in: ofdm_i_adc_serial_out_fixed_30dB.txt에 저장된 값
 ```systemverilog
+`timescale 1ns / 1ps
 
+module tb_rrc_filter();
+
+logic clk, rstn;
+logic [6:0] data_in;
+logic [6:0] data_out;
+
+rrc_filter DUT (
+    .clk(clk),
+    .rstn(rstn),
+    .data_in(data_in), // <1.6>
+    .data_out(data_out)  // <1.6>
+);
+
+always #5 clk <= ~clk;
+
+integer               data_file    ; // file handler
+integer               scan_file    ; // file handler
+logic   signed [6:0] captured_data;
+int i;
+`define NULL 0
+
+initial begin
+        clk <= 1'b1;
+        rstn <= 1'b0;
+        i=0;
+        #55 rstn <= 1'b1;
+        #789960 $finish;
+end
+
+initial begin
+        data_file = $fopen("ofdm_i_adc_serial_out_fixed_30dB.txt", "r");
+        if (data_file == `NULL) begin
+                $display("data_file handle was NULL");
+        end
+end
+
+always @(posedge clk) begin
+        if (!$feof(data_file) && rstn) begin
+                scan_file = $fscanf(data_file, "%d\n", captured_data);
+                data_in <= captured_data;
+        end else begin
+                data_in <= 0;
+        end
+end
+
+integer output_file;
+
+initial begin
+    output_file = $fopen("output.txt", "w");
+    if (output_file == `NULL) begin
+        $display("output_file handle was NULL");
+        $finish;
+    end
+end
+
+always @(posedge clk) begin
+        // 파일에 data_out 값을 10진수로 기록
+        if(data_out === 'x) begin
+
+        end else begin
+                $fwrite(output_file, "%0d\n", $signed(data_out));
+                $fflush(output_file);
+        end
+end
+
+// 시뮬레이션 끝나면 파일 닫기
+final begin
+        $fwrite(output_file, "-");
+        $fflush(output_file);
+        $fclose(output_file);
+end
+
+endmodule
 ```
 ### 합성 결과
 
