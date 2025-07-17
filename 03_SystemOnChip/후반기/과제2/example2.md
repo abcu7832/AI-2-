@@ -1,14 +1,9 @@
 ## RRC Filter(Root Raised Cosine Filter) with pipe register
-### 이론 정리
-![filter](/images/250717_1.png)
+## 이론 정리
 ### 구조
-* input: fixed: <1.6>
-* coefficient: fixed: <1.8>
-* output: fixed: <1.6>
-* 구현은 shift register를 이용하기로 결정!!!
-* coefficient 값 정리
 * 과제1 example1.md 내용과 동일
-![coefficient](/images/250716_5.png)
+![filter](/images/250717_1.png)
+
 ### 환경
 * sdc파일
 ```bash
