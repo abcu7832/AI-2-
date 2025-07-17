@@ -1,7 +1,6 @@
 ## RRC Filter(Root Raised Cosine Filter) with pipe register
 ### 이론 정리
-![filter](/images/250716_6.png)
-![filter](/images/250716_4.png)
+![filter](/images/250717_1.png)
 ### 구조
 * input: fixed: <1.6>
 * coefficient: fixed: <1.8>
