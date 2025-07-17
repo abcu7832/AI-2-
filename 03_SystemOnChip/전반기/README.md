@@ -3,7 +3,7 @@
 - **250605:** Verdi simulation Linux command 익히기  
 - **250609 ~ 250613:** SystemVerilog 익히기, Verdi tool 사용하여 simulation  
 
-### 진행
+### 기술스택
 
 <p>
   <img src="https://img.shields.io/badge/VCS_Verdi-003366?style=for-the-badge&logoColor=white" alt="Verdi" />
