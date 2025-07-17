@@ -1,7 +1,7 @@
 ### 일정  
 - **후반기:** 250714 ~ 250805
 
-### 진행
+### 기술스택
 
 <p>
   <img src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logoColor=white" alt="MATLAB" />
