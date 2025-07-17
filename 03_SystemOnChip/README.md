@@ -2,7 +2,7 @@
 
 ---
 
-### Tools & Languages
+### Tools & RTL
 
 <p>
   <img src="https://img.shields.io/badge/VCS_Verdi-003366?style=for-the-badge&logoColor=white" alt="Verdi" />
