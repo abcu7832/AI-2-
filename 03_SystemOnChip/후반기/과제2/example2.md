@@ -94,6 +94,8 @@ set_input_delay     500    -clock cnt_clk  [get_ports clk]
 
 ```
 ### 문제발생
+
+
 ![setuptime_violation](/images/250716_5.png)
 ### 코드
 ```systemverilog
